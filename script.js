@@ -19,6 +19,7 @@ const startGame = () => {
     cells.forEach(cell => {
         cell.classList.remove('x');
         cell.classList.remove('circle');
+        cell.innerHTML = ''; // Clear the cell's content
         cell.removeEventListener('click', handleClick);
         cell.addEventListener('click', handleClick, { once: true });
     });
@@ -55,6 +56,7 @@ const isDraw = () => {
 
 const placeMark = (cell, currentClass) => {
     cell.classList.add(currentClass);
+    cell.innerHTML = currentClass === 'x' ? 'X' : 'O'; // Display X or O
 };
 
 const swapTurns = () => {
