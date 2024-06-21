@@ -1,5 +1,6 @@
+// src/App.jsx
 import React from 'react';
-import Game from './Game';
+import Game from './components/Game';
 
 const App = () => (
   <div className="App">
